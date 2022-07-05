@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Hatton; 
+    src: url('../fonts/PP\ Hatton\ Bold\ 700.otf');
+ } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hatton', serif;
+}
+.top-bar{
+    height: 6vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    padding-left: 10px;
+    color:white;
+}
+.logo img{
+    width: 3vw;
+    height: 2vw;
+}
+.nav-bar{
+    padding-right: 10px;
+}
+.nav-bar ul{
+    font-size: 2vh;
+    list-style: none;
+}
+.nav-bar ul li{
+    display:inline;
+    padding: 20px;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+.page1{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;   
+}
+.page1 p{
+    color:black;
+    font-size: 8vw;
+    letter-spacing: 2vw;
+}
+.marbleDiv{
+    height: 50vh;
+    width: 10vw;
+    background-image: url('/images/marble.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 8vw;
+}
+.animate__animated.animate__zoomInDown {
+    --animate-duration: 3s;
+  }
+.animate__animated.animate__zoomInUp {
+--animate-duration: 3s;
+}
+.animate__animated.animate__zoomOutDown {
+--animate-duration: 2s;
+}
+.animate__animated.animate__zoomOutUp {
+--animate-duration: 2s;
+}
+.page2{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url('/images/bg_main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;  
+    
+}
+.slogan{
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4vw;
+}
+.slogan span{
+    font-family: cursive;
+    font-size: 1vw;
+}
+.slogan p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+}
+.menuIcon{
+    padding-right: 20px;
+    color:white;
+    font-size: 25px;
+    display: none;
+}
+@media screen and (max-width:425px) {
+    .logo img{
+        width:25px;
+        height: 25px;
+    }
+    .nav-bar ul li{
+        top:5px;
+        right: 20px;
+        display:none;
+        padding: 20px;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .marbleDiv{
+        width:25vw;
+    }
+    .page2{
+        background-image: linear-gradient(rgba(15,15,15,0.3),rgba(15,15,15,0.3)), url('/images/bg_main.jpeg');
+        align-items: center;
+        justify-content: space-around;
+    }
+    .slogan{
+        font-size: 15vw;
+    }
+    .slogan span{
+        font-size: 4vw;
+    }
+    .slogan p{
+        font-size: 6vw;
+    }
+}
+  
+ 
