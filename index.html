@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kanasu-The Dream</title>
@@ -22,52 +23,88 @@
             </div>
         </div>
         <div class="nav-bar">
-            <ul>
+            <ul id="menuList">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#home">Kanasu</a></li>
-                <li><a href="#home">About</a></li>
-                <li><a href="#home">Contact</a></li>
+                <li><a href="#kanasu">Kanasu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="menuIcon"><i class="fa fa-bars"></i></div>        
+        <div class="menuIcon" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>        
     </div>
 
     <div class="page1">
-      <div id="marble" class="marbleDiv animate__animated animate__zoomInUp">K</div>
-      <p id="kanasuText" class="animate__animated animate__zoomInDown">KANASU</p>          
+      <div id="marble" data-aos="zoom-in-up" class="marbleDiv">K</div>
+      <p id="kanasuText" data-aos="zoom-in-down">KANASU</p>          
     </div>
     <div class="page2">
-        <div class="slogan">
+        <div data-aos="fade-up" class="slogan">
             KANASU <span>The Dream</span>
             <p>making realty dream reality</p>
             <br/><br/>
             <p>Studio, 1, 2 & 3 BHK home</p>
             <p>in downton Surrey</p>
-
+            <button type="submit" onclick="window.location.href='https://www.freecodecamp.org/';">Explore</button>
+        </div>
+    </div>
+    <div class="page3">
+        <div data-aos="fade-up" class="page3-right-div">
+            West Tower<h6>( # Floors)</h6>
+            <h6>_____________________</h6>
+            <div class="page3-row">
+                <div><span class="page3-pill">106</span> Studio &nbsp;&nbsp;&nbsp;</div>
+                <div><span class="page3-pill">3</span> 1 Bed + Den</div>
+            </div>
+            <div class="page3-row">
+                <div><span class="page3-pill">241</span> 1 Bed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div><span class="page3-pill">236</span> 2 Bed</div>                
+            </div>
+            <div class="page3-row">
+                <button type="submit" onclick="window.location.href='https://www.freecodecamp.org/';">Explore</button>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        
+    <!-- <script src="js/Wow/wow.min.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 350, // values from 0 to 3000, with step 50ms
+            duration: 2000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true,
+        });
+    </script>
+    <script>
+        var menuList=document.getElementById('menuList');
+        function toggleMenu(){alert(menuList.getAttribute("display"));
+            if(menuList.getAttribute("display")=="block"){ 
+                menuList.setAttribute("display","none");
+            }else{
+                menuList.setAttribute("display","block");
+            }
+        };
         var animTimeOut, pageTimeout;
         $(document).ready(function(){
-            animTimeOut=setTimeout(changeClass,8000);
-                                  
+            animTimeOut=setTimeout(changeClass,5000);
+            window.scrollTo(0,0);
+                                
         });
         function changeClass(){
-          $('#marble').removeClass('animate__zoomInUp');
-          $('#marble').addClass('animate__zoomOutDown');
-          $('#kanasuText').removeClass('animate__zoomInDown');
-          $('#kanasuText').addClass('animate__zoomOutUp');          
           clearTimeout(animTimeOut);
           pageTimeout=setTimeout(hidePage1,3000);          
         };
         function hidePage1(){
-            $('.page1').css('display','none');
+            window.scrollTo(0,$(window).height());
+            $('#marble').attr('data-aos','zoom-out-down');
+            $('#kanasuText').attr('data-aos','zoom-out-up');
             clearTimeout(pageTimeout);
-            $('.slogan').addClass('animate__animated animate__zoomInUp')
+            // $('.slogan').addClass('animate__animated animate__zoomInUp')
         }
+
     </script>
 </body>
 </html>
