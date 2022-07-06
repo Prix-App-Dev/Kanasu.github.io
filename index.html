@@ -80,11 +80,11 @@
     </script>
     <script>
         var menuList=document.getElementById('menuList');
-        function toggleMenu(){alert(menuList.getAttribute("display"));
-            if(menuList.getAttribute("display")=="block"){ 
-                menuList.setAttribute("display","none");
+        function toggleMenu(){
+            if(menuList.style.display=="block"){ 
+                menuList.style.display="none";
             }else{
-                menuList.setAttribute("display","block");
+                menuList.style.display="block";
             }
         };
         var animTimeOut, pageTimeout;
