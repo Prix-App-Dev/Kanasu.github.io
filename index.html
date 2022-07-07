@@ -33,11 +33,11 @@
         <div class="menuIcon" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>        
     </div>
 
-    <div class="page1">
-      <div id="marble" data-aos="zoom-in-up" class="marbleDiv">K</div>
-      <p id="kanasuText" data-aos="zoom-in-down">KANASU</p>          
+    <div id="home" data-aos="fade-up" class="page1">
+      <div id="marble" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="5000" class="marbleDiv">K</div>
+      <p id="kanasuText" data-aos="zoom-in-down" data-aos-delay="500" data-aos-duration="5000">KANASU</p>          
     </div>
-    <div class="page2">
+    <div id="kanasu" class="page2">
         <div data-aos="fade-up" class="slogan">
             KANASU <span>The Dream</span>
             <p>making realty dream reality</p>
@@ -56,17 +56,70 @@
                 <div><span class="page3-pill">3</span> 1 Bed + Den</div>
             </div>
             <div class="page3-row">
-                <div><span class="page3-pill">241</span> 1 Bed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div><span class="page3-pill">241</span> 1 Bed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                 <div><span class="page3-pill">236</span> 2 Bed</div>                
+            </div>
+            <div class="page3-row">
+                <ul>
+                    <li>The West Tower additionally offer 4 commercial retail units</li>
+                </ul>
             </div>
             <div class="page3-row">
                 <button type="submit" onclick="window.location.href='https://www.freecodecamp.org/';">Explore</button>
             </div>
         </div>
     </div>
+    <div class="page4">
+        <div data-aos="fade-up" class="page3-right-div">
+            East Tower<h6>( # Floors)</h6>
+            <h6>_____________________</h6>
+            <div class="page3-row">
+                <div><span class="page3-pill">135</span> Studio &nbsp;&nbsp;&nbsp;</div>
+                <div><span class="page3-pill">6</span> 1 Bed + Den</div>
+            </div>
+            <div class="page3-row">
+                <div><span class="page3-pill">241</span> 1 Bed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div><span class="page3-pill">168</span> 2 Bed</div>                
+            </div>            
+            <div class="page3-row">
+                <button type="submit" onclick="window.location.href='https://www.freecodecamp.org/';">Explore</button>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="page5">
+        <div class="page5-row1">
+            <div data-aos="fade-up" class="page5-row1-col1">
+                <h2>Logo Here</h2><br/>
+                <h5>Slogan Here</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi itaque rem tempora. Dignissimos, vitae ut quod ad perspiciatis commodi perferendis ab, ex dolorem eum voluptas quaerat, facilis neque exercitationem at!</p>
+            </div>
+            <div data-aos="fade-up" class="page5-row1-col2">
+                <img src="images/Towers.jpeg" />
+            </div>
+        </div>
+        <div class="page5-row2">
+            <div class="page5-row2-pill"><i class="fa fa-envelope"></i> Email Address</div>
+            <div class="page5-row2-pill"><i class="fa fa-phone"></i> Mobile Number</div>
+            <div class="page5-row2-pill">Social Media</div>
+        </div>
+    </div>
+    <div id="contact" class="page6">
+        <form>
+        <div class="card">
+            
+                <h2>CONTACT US</h2>
+                <br/>
+                <input type="text" placeholder="Enter Your Name" required/>
+                <input type="email" placeholder="Enter Your Email ID" required/>
+                <input type="tel" placeholder="Enter Your telephone" required/>
+                <textarea placeholder="Enter Your query" multiple="true" required></textarea>
+                <button type="submit">SUBMIT</button>
+                        
+        </div>
+    </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- <script src="js/Wow/wow.min.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -99,9 +152,9 @@
         };
         function hidePage1(){
             window.scrollTo(0,$(window).height());
-            $('#marble').attr('data-aos','zoom-out-down');
-            $('#kanasuText').attr('data-aos','zoom-out-up');
-            clearTimeout(pageTimeout);
+            // $('#marble').attr('data-aos','zoom-out-down');
+            // $('#kanasuText').attr('data-aos','zoom-out-up');
+             clearTimeout(pageTimeout);
             // $('.slogan').addClass('animate__animated animate__zoomInUp')
         }
 
