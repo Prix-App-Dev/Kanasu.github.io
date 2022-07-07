@@ -42,16 +42,31 @@
     padding-right: 10px;
 }
 .nav-bar ul{
+    flex: 1;
     font-size: 1.5vw;
-    list-style: none;
 }
 .nav-bar ul li{
-    display:inline;
+    /* flex: 1; */
+    list-style: none;
+    display:inline-block;
     padding: 20px;
+    position: relative;
 }
 .nav-bar ul li a{
     text-decoration: none;
     color:white;
+}
+.nav-bar ul li::after{
+    content: '';
+    height: 2px;
+    background: white;
+    width: 0%;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+.nav-bar ul li:hover:after{
+    width: 100%;
 }
 /* -----------------------------Page1---------------------------- */
 .page1{

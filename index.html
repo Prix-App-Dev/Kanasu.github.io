@@ -23,14 +23,14 @@
             </div>
         </div>
         <div class="nav-bar">
-            <ul id="menuList">
+            <ul onclick="toggleMenu()" id="menuList">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#kanasu">Kanasu</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="menuIcon" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>        
+        <div id="menuIcon" class="menuIcon" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>        
     </div>
 
     <div id="home" data-aos="fade-up" class="page1">
@@ -133,12 +133,15 @@
     </script>
     <script>
         var menuList=document.getElementById('menuList');
+        var btnStat=document.getElementById('menuIcon');
         function toggleMenu(){
-            if(menuList.style.display=="block"){ 
-                menuList.style.display="none";
-            }else{
-                menuList.style.display="block";
-            }
+            if(window.getComputedStyle(btnStat).display=="block"){
+                if(menuList.style.display=="block"){ 
+                    menuList.style.display="none";
+                }else{
+                    menuList.style.display="block";
+                }
+            }          
         };
         var animTimeOut, pageTimeout;
         $(document).ready(function(){
