@@ -399,7 +399,7 @@ button:hover {
     .page3{
         justify-content: start;
         align-items: flex-end;
-        background-position: 0 5vh;
+        background-position: 0 0;
         background-size: 50vh 100vw;
     }
     .page3-right-div{
