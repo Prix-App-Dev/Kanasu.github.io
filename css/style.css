@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Montserrat';
 }
 .top-bar{
     height: 7vh;
@@ -17,7 +18,6 @@
     align-items: center;
     background-color: black;
     z-index: 1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .menuIcon{
     padding-right: 20px;
@@ -101,45 +101,56 @@
     height: 100vh;
     width:100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    background-image: url('../images/bg_main.jpg');
-    background-size: cover;
-    background-position: center;
+    justify-content: start;
+    align-items: center;
+    background-image: url('../images/bg_page2.jpg');
     background-repeat: no-repeat;
-    color:white;  
-    
+    background-size: cover;
+}    
+
+.page2-matter{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/bg_page2_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color:white;
+    padding-left: 3vw; 
 }
-.slogan{
+.page2-matter span{
+    font-style: italic;
+    font-weight: 900;
     padding-left: 10px;
     font-size: 4vw;
 }
-.slogan span{
-    font-family: cursive;
-    font-size: 1vw;
+.page2-matter p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2vw;
 }
-.slogan p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-}
-.slogan button{
+.page2-matter a{
     border-radius: 10px;
-    margin-left: 150px;
-    background-color: white;
-    color: black;
+    margin-left: 100px;
+    color: white;
+    background: black;
     padding: 15px 25px;
     text-decoration: none;
     cursor: pointer;
     border: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
-
+.mtop-5{
+    margin-top: 20vh;
+}
+/* -------------------------------------------- Page 3------------------------------ */
 .page3{
     height: 100vh;
     width:100%;
-    background-image: url('../images/TowerWest.jpeg');
+    background-image: url('../images/Towers.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -148,28 +159,34 @@
     align-items: center;
     color:white;
 }
+
 .page3-right-div{
-    margin-top: 6vh; 
-    height: 94vh;
-    margin-right: 2vw;
+    padding-top: 6vh;
+    width:25vw; 
+    height: 100vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    font-size: 2.5vw;
+    background-color: black;
 }
-.page3-row{
-    width:100%;
+.page3-right-div table{
+    font-size: 1.5vw;
+    text-align: center;
+}
+.page3-right-div table tr td{
     font-size: 1vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 10px;
+    text-align: center;
 }
-.page3-right-div h6{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
+.page3-right-div a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 1vw;
+    padding: 5px;
 }
 .page3-pill{
   background-color: white;
@@ -183,19 +200,7 @@
   margin: 4px 2px;
   border-radius: 16px;
 }
-.page3 button{
-    margin: 0 auto 0 auto;
-    border-radius: 10px;
-    margin-top: 50px;
-    background-color: white;
-    color: black;
-    padding: 15px 25px;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-}
+/* -------------------------------------------- Page 4------------------------------ */
 .page4{
     height: 100vh;
     width:100%;
@@ -362,58 +367,62 @@ button:hover {
         width:25vw;
     }
     .page2{
-        background-image: linear-gradient(rgba(15,15,15,0.3),rgba(15,15,15,0.3)), url('../images/bg_main.jpeg');
-        align-items: center;
-        justify-content: space-around;
+        justify-content: start;
+        align-items: flex-end;
         background-position: center;
-        background-size: 100vw 100vh;
-    }
-    .slogan{
-        font-size: 15vw;
-    }
-    .slogan span{
-        font-size: 4vw;
-    }
-    .slogan p{
-        font-size: 6vw;
-    }
-    .slogan button{
-        font-size: 2vh;
-    }
-    .page3{
-        height: 100vh;
-        width:100%;
-        background-image:linear-gradient(rgba(15,15,15,0.5),rgba(15,15,15,0.5)), url('../images/EastTower_M.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
+    }    
+    
+    .page2-matter{
+        height: 30vh;
+        width: 100%;
+        background-color: black;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        color:white;
-    }
-    .page3-right-div{
-        font-size: 6vh;
-    }
-    .page3-row{
-        font-size: 6vw;
-        flex-direction: column;
-        justify-content: flex-start;
         align-items: flex-start;
-        padding: 5px;
-    }    
-    .page3-right-div h6{
-        font-size: 1.5vh;
+        background-image: none;
+        
     }
-    .page3-pill{
-        font-size: 3vh;
-        font-weight: 700;
-        width: 20vw;
-    }
-    .page3 button{
+    .page2-matter p{
         font-size: 2vh;
     }
+    .page2-matter a{
+        border-radius: 10px;
+        margin-left: 10px;
+        color: white;
+        border: 1px solid white;
+        font-size: 1vh;
+    }
+    .mtop-5{
+        margin-top: 1vh;
+    }
+    /* -------------------------------------------------Page3------------------------------- */
+    .page3{
+        justify-content: start;
+        align-items: flex-end;
+        background-position: 0 5vh;
+        background-size: 50vh 100vw;
+    }
+    .page3-right-div{
+        padding-top: 2vh;
+        width:100vw; 
+        height: 50vh;
+        padding-right: 1vw;
+        padding-left: 1vw;
+    }
+    .page3-right-div table{
+        font-size: 3vh;
+    }
+    .page3-right-div table tr td{
+        font-size: 1.2vh;
+    }
+    .page3-right-div a{
+        font-size: 1.2vh;
+    }
+    .page3-pill{
+      width:8vh;
+      font-size: 1.5vh;
+    }
+    
     .page4{
         height: 100vh;
         width:100%;
