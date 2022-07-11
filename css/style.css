@@ -294,6 +294,7 @@
 .page6{
     height: 100vh;
     width:100%;
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,18 +303,20 @@
 }
 .card{
     height: 80vh;
-    width: 50vw;
+    width: 45vw;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding-top: 50px;
+    padding: 50px;
+    border-radius: 8px;
 }
 input, textarea{
-    width: 70%;
+    width: 90%;
     height: 40px;
-    background-color: bisque;
+    background-color: whitesmoke;
     border-radius: 5px;
     margin: 15px;
     padding: 5px;
@@ -326,7 +329,7 @@ textarea{
 
 .card button {
     border: none;
-    color: black;
+    background-color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -337,10 +340,9 @@ textarea{
     color:white
 
 }
-button:hover {
-    background-color: black; /* Green */
-    color: white;
-    border: 1px solid white;
+.card button:hover {
+    background-color: white; /* Green */
+    color: black;
 }
 
 /* ---------------------------------------------------- Responsive--------------------- */
