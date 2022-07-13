@@ -162,7 +162,7 @@
 
 .page3-right-div{
     padding-top: 6vh;
-    width:25vw; 
+    width:30%; 
     height: 100vh;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -176,9 +176,13 @@
     font-size: 1.5vw;
     text-align: center;
 }
+.page3-right-div table tr {
+    padding-top: 10px;
+}
 .page3-right-div table tr td{
     font-size: 1vw;
     text-align: center;
+    padding: 10px;
 }
 .page3-right-div a{
     color: white;
