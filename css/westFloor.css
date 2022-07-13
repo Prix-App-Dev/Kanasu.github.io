@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Hatton; 
+    src: url('../fonts/PP\ Hatton\ Bold\ 700.otf');
+ } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat';
+}
+.top-bar{
+    height: 7vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 1000;
+}
+.menuIcon{
+    padding-right: 20px;
+    color:white;
+    font-size: 25px;
+    display: none;
+}
+.logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    padding-left: 10px;
+    color:white;
+    font-family: 'Hatton', serif;
+}
+.logo img{
+    width: 3vw;
+    height: 2vw;
+}
+.nav-bar{
+    padding-right: 10px;
+}
+.nav-bar ul{
+    flex: 1;
+    font-size: 1.5vw;
+}
+.nav-bar ul li{
+    /* flex: 1; */
+    list-style: none;
+    display:inline-block;
+    padding: 20px;
+    position: relative;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color:white;
+}
+.nav-bar ul li::after{
+    content: '';
+    height: 2px;
+    background: white;
+    width: 0%;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+.nav-bar ul li:hover:after{
+    width: 100%;
+}
+#sliderDiv{
+    padding:50px 15px 50px 15px;
+}
