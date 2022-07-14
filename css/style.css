@@ -381,6 +381,7 @@ textarea{
         width:25vw;
     }
     .page2{
+        height:100vh;
         justify-content: start;
         align-items: flex-end;
         background-position: center;
@@ -455,8 +456,8 @@ textarea{
     
     .page5-row1-col1{
         width: 100%;
-        padding: 60px 5px 5px 5px;
-        font-size: 2vh;
+        padding: 60px 10px 5px 10px;
+        font-size: 1.7vh;
         background-color: black;
         color:white;
     }
