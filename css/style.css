@@ -395,6 +395,7 @@ textarea{
     }
     .marbleDiv{
         width:25vw;
+        height: 30vh;
     }
     .page2{
         height:100vh;
@@ -496,12 +497,15 @@ textarea{
     }
     .card{
         width:95vw;
-        height: 90vh;
+        height: 85vh;
         margin-top: 40px;
         padding-top:20px;
     }
     input, textarea{
         width: 95%;
+    }
+    .footer{
+        font-size: 2vw;
     }
 }
   
